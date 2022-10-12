@@ -1,27 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            FIT3179A2
+        </title>
 
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" media="all">
 
-    <script type="text/javascript" >
-        var vg_1 = "https://raw.githubusercontent.com/gail7280/FIT3179A2/main/map";
-        vegaEmbed("#map", vg_1).then(function(result) {   
-        }).catch(console.error);
-    </script>
+    </head>
 
-    <title>Vega-lite Map </title>
-</head>
+    <body>
+        <div class="page">
 
-<body>
-    <div id="map">
-    </div>
-</body>
+            <!-- header -->
+            <div style="text-align: center">
+                <h1>
+                    Olympic Summary (1992 - 2008)
+                </h1>
+                <h3>
+                    This visualization includes a range of idioms analyzing the medal statistics of summer Olympic games across 1992 to 2008.
+                </h3>
+            </div>
+            <hr style="border-top: 5px solid black;"/>
+
+            <!-- idiom 1 -->
+            <div class="pure-g">
+                <div class="pure-u-1-3">
+                    <article id="graph1"></article>
+                </div>
+                <div class="pure-u-1-3"></div>
+                <div class="pure-u-1-3">
+                    <p style="font-size: large">
+                        This idiom shows the total medal counts of all countries worldwide from 1992 to 2008 Olympic games. <br><br>
+                        Among all the countries, <strong>United State of America</strong> has won the most medals with a number of <span class="warning">1311</span>. 
+                        It is the only country with a total number over 1000. <br><br>
+                        <strong>Germany, Australia, Russia</strong> and <strong>China</strong> has also won impressive number of medals over 500.
+                    </p>
+                </div>
+            </div>
+            <hr style="border-top: 1px dashed gray;"/>
+
+            <!-- idiom 2 -->
+            <div class="pure-g">
+                <div class="pure-u-1-3">
+                    <article id="graph2"></article>
+                </div>
+                <div class="pure-u-1-3"></div>
+                <div class="pure-u-1-3">
+                    <p style="font-size: large">
+                        This idiom shows the relationship between athlete numbers and medal numbers. <br><br>
+                        Overall, we can summaries that there is a <strong>linear positive</strong> relationship between these two features. <br><br>
+                        By sliding the bar, we can compare the data between each Olympic game. <br><br>
+                        The permanent members of the United Nations Security Council are chosen as filter in the drop-down bar. By switching the country,
+                        we can see the specific data regarding to these countries.
+                    </p>
+                </div>
+            </div>
+            <hr style="border-top: 1px dashed gray;"/>
+
+
+            <script type="text/javascript" >
+                var vg_1 = "https://raw.githubusercontent.com/gail7280/FIT3179A2/main/graph1.json";
+                vegaEmbed("#graph1", vg_1).then(function(result) {   
+                }).catch(console.error);
+
+                var vg_2 = "https://raw.githubusercontent.com/gail7280/FIT3179A2/main/graph2.json";
+                vegaEmbed("#graph2", vg_2).then(function(result) {   
+                }).catch(console.error);
+            </script>
+
+        </div>
+    </body>
 
 </html>

@@ -5,9 +5,9 @@
   },
   "hconcat": [
     {
-      "width": 500,
+      "width": 600,
       "height": 400,
-      "title": "World Olympic Count",
+      "title": "World Olympic Medal Counts",
       "projection": {"type": "equalEarth", "rotate":[-150,0,0]},
       "layer": [
         {
