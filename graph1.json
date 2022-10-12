@@ -5,7 +5,7 @@
   },
   "hconcat": [
     {
-      "width": 800,
+      "width": 500,
       "height": 400,
       "title": "World Olympic Count",
       "projection": {"type": "equalEarth", "rotate":[-150,0,0]},
