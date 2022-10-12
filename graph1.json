@@ -7,7 +7,7 @@
     {
       "width": 800,
       "height": 400,
-      "title": "Summer Olympic Medals Total(1992-2008)",
+      "title": "World Olympic Count",
       "projection": {"type": "equalEarth", "rotate":[-150,0,0]},
       "layer": [
         {
