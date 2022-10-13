@@ -8,29 +8,6 @@
     },
     "params": [
         {
-            "name": "Country_selection",
-            "bind": {
-                "input": "select",
-                "options": [
-                    null,
-                    "China",
-                    "France",
-                    "Russia",
-                    "United Kingdom",
-                    "United States"
-                ],
-                "labels":[
-                    "Show All",
-                    "China",
-                    "France",
-                    "Russia",
-                    "United Kingdom",
-                    "United States"
-                ],
-                "name": "Country Selection: "
-            }
-        },
-        {
             "name": "Year_selection",
             "value": 1992,
             "bind": {
@@ -43,7 +20,6 @@
         }
     ],
     "transform": [
-        {"filter": "Country_selection == null || datum.Country == Country_selection"},
         {"filter": "datum.Year == Year_selection"}
     ],
     "mark": "circle",
